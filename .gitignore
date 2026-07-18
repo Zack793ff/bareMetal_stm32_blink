@@ -1,0 +1,33 @@
+# Generated files
+*.elf
+*.bin
+*.map
+*.o
+*.d
+# Remove the incomplete one
+rm .gitignore
+
+# Create a proper one
+cat > .gitignore << 'EOF'
+# Generated build files
+*.elf
+*.bin
+*.map
+*.o
+*.d
+
+# IDE and OS files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Build directories
+build/
+out/
+debug/
+release/
+
+# STM32CubeProgrammer files
+*.hex
+*.out
